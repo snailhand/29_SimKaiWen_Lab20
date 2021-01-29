@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    Vector3 cameraPos1 = new Vector3(0,8,-8);
-    Vector3 cameraPos2 = new Vector3(0,14,0);
+    Vector3 cameraPos1 = new Vector3(0,9,-9);
+    Vector3 cameraPos2 = new Vector3(0,15,0);
 
     public float cameraSpeed = 16;
 

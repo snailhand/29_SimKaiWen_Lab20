@@ -17,13 +17,13 @@ public class GameManager : MonoBehaviour
             gameManager = this;
         }
 
-        for(int i = 0; i < 100; i++)
+        for(int i = 0; i < 70; i++)
         {
-            Vector3 randomPos = new Vector3(Random.Range(-200, 200), 0.5f, Random.Range(-200, 200));
+            Vector3 randomPos = new Vector3(Random.Range(-25, 25), 0.5f, Random.Range(-25, 25));
             Instantiate(wallObject, randomPos, Quaternion.identity);
         }
 
-        Vector3 randomGoal = new Vector3(Random.Range(-50, 50), 2.5f, Random.Range(-50, 50));
+        Vector3 randomGoal = new Vector3(Random.Range(-5, 5), 2.5f, Random.Range(-5, 5));
         Instantiate(goalObject, randomGoal, Quaternion.identity);
         goalCount = 1;
     }
@@ -31,16 +31,16 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        print(goalCount);
     }
 
     public void ResetGoal()
     {
-        if (goalCount != 1)
+        if (goalCount == 0)
         {
-            Vector3 randomGoal = new Vector3(Random.Range(-50, 50), 2.5f, Random.Range(-50, 50));
+            Vector3 randomGoal = new Vector3(Random.Range(-10, 10), 2.5f, Random.Range(-10, 10));
             Instantiate(goalObject, randomGoal, Quaternion.identity);
-            goalCount = 1;
+            goalCount++;
         }
     }
 }
